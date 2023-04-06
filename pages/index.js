@@ -92,7 +92,7 @@ export default function Home() {
               <div className="col-md-6 col-lg-4">
                 <h2 className="display-4">Document Sign</h2>
                 <p>
-                  To sign document write text on textarea at right and click add. Before adding make sure you are connected. You can click on 'Connect' button at top right
+                  To sign document write text on textarea at right and click add. Before adding make sure you are connected. You can click on Connect button at top right
                 </p>
               </div>
               <div className="col-md-6 col-lg-8 clearfix">
@@ -116,7 +116,7 @@ export default function Home() {
         <div className="container">
           <div className="row gy-3">
             {coins.map((item, index) => (
-              <div className="col-lg-4 col-md-6">
+              <div className="col-lg-4 col-md-6" key={index}>
                 <div className="card h-100">
                   <div className="card-body d-flex flex-column">
                     <h5 className="card-title">{item.info}</h5>
@@ -129,7 +129,7 @@ export default function Home() {
                     <hr />
                     <div className="mb-4">
                       {item.signers.map((signer, index2) => (
-                        <p className="small-text">{signer}</p>
+                        <p key={"t-" + index + "-" + index2} className="small-text">{signer}</p>
                       ))}
                     </div>
                     <button
